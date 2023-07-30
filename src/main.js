@@ -6,11 +6,3 @@ const app = new App({
 });
 
 export default app;
-
-let counter = 100
-setInterval(() => {
-		if(counter>0){
-			counter--
-		}
-    document.getElementById('counterElement').style.setProperty('--value', counter)
-}, 1000)
