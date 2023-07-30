@@ -17,21 +17,20 @@ Nocrastinate is a Progressive Web App (PWA) built with Svelte and DaisyUI that o
 
 ## Technologies
 
+https://stackblitz.com/edit/daisyui-svelte-vite/
 - Svelte
 - JavaScript
-- DaisyUI
+- DaisyUI (TailwindCSS)
 - Vite
-- TailwindCSS
 - PWA
 
-<!--
 ## Installation
 
 1. Clone the repository
-2. Install dependencies with `yarn install`
-3. Run the app with `yarn start`
-4. Open `http://localhost:3000` in your browser
--->
+2. Install dependencies with `npm install`
+3. Run the app with `npm run dev`
+4. Open `http://localhost:5173` in your browser
+
 
 ## Contributing
 
