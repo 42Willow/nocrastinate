@@ -1,4 +1,4 @@
 module.exports = {
   content: ['./src/**/*.{svelte,js,}'],
-  plugins: [require('daisyui')],
+  plugins: [require("@tailwindcss/typography"),require('daisyui')],
 };

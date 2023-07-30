@@ -1,3 +1,7 @@
+<script>
+  import Counter from './Intro.svelte'
+</script>
+
 <div class="navbar bg-base-100">
     <div class="navbar-start">
         <div class="dropdown">
@@ -67,7 +71,7 @@
     </div>
 </div>
 
-
+<Counter />
 
 <footer class="footer footer-center p-10 bg-primary text-primary-content">
   <div>
