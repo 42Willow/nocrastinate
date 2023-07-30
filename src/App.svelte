@@ -9,45 +9,81 @@
             <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
             <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                 <!-- svelte-ignore a11y-missing-attribute -->
-                <li><a>Item 1</a></li>
+                <li><a>Home</a></li>
+                <!-- svelte-ignore a11y-missing-attribute -->
+                <li><a>Metrics</a></li>
                 <li>
                     <!-- svelte-ignore a11y-missing-attribute -->
-                    <a>Parent</a>
+                    <a>Strategies</a>
                     <ul class="p-2">
-                    <!-- svelte-ignore a11y-missing-attribute -->
-                    <li><a>Submenu 1</a></li>
-                    <!-- svelte-ignore a11y-missing-attribute -->
-                    <li><a>Submenu 2</a></li>
+                        <!-- svelte-ignore a11y-missing-attribute -->
+                        <li><a>Pomodoro</a></li>
+                        <!-- svelte-ignore a11y-missing-attribute -->
+                        <li><a>Time tracker</a></li>
+                        <!-- svelte-ignore a11y-missing-attribute -->
+                        <li><a>Circadian rhythm</a></li>
                     </ul>
                 </li>
-                <!-- svelte-ignore a11y-missing-attribute -->
-                <li><a>Item 3</a></li>
             </ul>
         </div>
-        <a class="btn btn-ghost normal-case text-xl" href="https://github.com/42willow/nocrastinate">Nocrastinate</a>
+        <!-- svelte-ignore a11y-missing-attribute -->
+        <a class="btn btn-ghost normal-case text-xl">Nocrastinate</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
             <!-- svelte-ignore a11y-missing-attribute -->
-            <li><a>Item 1</a></li>
+            <li><a>Home</a></li>
+            <!-- svelte-ignore a11y-missing-attribute -->
+            <li><a>Metrics</a></li>
             <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
             <li tabindex="0">
                 <details>
-                    <summary>Parent</summary>
+                    <summary>Strategies</summary>
                     <ul class="p-2">
-                    <!-- svelte-ignore a11y-missing-attribute -->
-                    <li><a>Submenu 1</a></li>
-                    <!-- svelte-ignore a11y-missing-attribute -->
-                    <li><a>Submenu 2</a></li>
+                        <!-- svelte-ignore a11y-missing-attribute -->
+                        <li><a>Pomodoro</a></li>
+                        <!-- svelte-ignore a11y-missing-attribute -->
+                        <li><a>Time tracker</a></li>
+                        <!-- svelte-ignore a11y-missing-attribute -->
+                        <li><a>Circadian rhythm</a></li>
                     </ul>
                 </details>
             </li>
-            <!-- svelte-ignore a11y-missing-attribute -->
-            <li><a>Item 3</a></li>
         </ul>
     </div>
     <div class="navbar-end">
-      <!-- svelte-ignore a11y-missing-attribute -->
-      <a class="btn">Button</a>
+      <label class="btn btn-circle swap swap-rotate">
+  
+        <!-- this hidden checkbox controls the state -->
+        <input type="checkbox" />
+        
+        <!-- play icon -->
+        <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M366-232q-15 10-30.5 1T320-258v-450q0-18 15.5-27t30.5 1l354 226q14 9 14 25t-14 25L366-232Zm14-251Zm0 171 269-171-269-171v342Z"/></svg>
+        
+        <!-- pause icon -->
+        <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M585-200q-24.75 0-42.375-17.625T525-260v-440q0-24.75 17.625-42.375T585-760h115q24.75 0 42.375 17.625T760-700v440q0 24.75-17.625 42.375T700-200H585Zm-325 0q-24.75 0-42.375-17.625T200-260v-440q0-24.75 17.625-42.375T260-760h115q24.75 0 42.375 17.625T435-700v440q0 24.75-17.625 42.375T375-200H260Zm325-60h115v-440H585v440Zm-325 0h115v-440H260v440Zm0-440v440-440Zm325 0v440-440Z"/></svg>
+      </label>
+      <!-- <a class="btn" href="https://github.com/42willow/nocrastinate">GitHub</a> -->
     </div>
 </div>
+
+
+
+<footer class="footer footer-center p-10 bg-primary text-primary-content">
+  <div>
+    <!-- svg at pubic/nocrastinate.svg, 300px scale -->
+      <img src="nocrastinate.svg" alt="Nocrastinate logo" width="200" height="200" class="mx-auto"/>
+    <p class="font-bold">
+      Nocrastinate <br/>The better to do list app
+    </p> 
+    <a href="https://github.com/42willow/nocrastinate/blob/main/LICENSE" style="display: flex; align-items: center;">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-law mr-2">
+        <path d="M8.75.75V2h.985c.304 0 .603.08.867.231l1.29.736c.038.022.08.033.124.033h2.234a.75.75 0 0 1 0 1.5h-.427l2.111 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.006.005-.01.01-.045.04c-.21.176-.441.327-.686.45C14.556 10.78 13.88 11 13 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L12.178 4.5h-.162c-.305 0-.604-.079-.868-.231l-1.29-.736a.245.245 0 0 0-.124-.033H8.75V13h2.5a.75.75 0 0 1 0 1.5h-6.5a.75.75 0 0 1 0-1.5h2.5V3.5h-.984a.245.245 0 0 0-.124.033l-1.289.737c-.265.15-.564.23-.869.23h-.162l2.112 4.692a.75.75 0 0 1-.154.838l-.53-.53.529.531-.001.002-.002.002-.006.006-.016.015-.045.04c-.21.176-.441.327-.686.45C4.556 10.78 3.88 11 3 11a4.498 4.498 0 0 1-2.023-.454 3.544 3.544 0 0 1-.686-.45l-.045-.04-.016-.015-.006-.006-.004-.004v-.001a.75.75 0 0 1-.154-.838L2.178 4.5H1.75a.75.75 0 0 1 0-1.5h2.234a.249.249 0 0 0 .125-.033l1.288-.737c.265-.15.564-.23.869-.23h.984V.75a.75.75 0 0 1 1.5 0Zm2.945 8.477c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327Zm-10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327Z" fill="white"></path>
+      </svg>
+      <span style="color: white;">GPL-3.0 license</span>
+    </a>
+    <div class="grid grid-flow-col gap-4">
+      <a href="https://github.com/42willow/nocrastinate"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+    </div>
+  </div>
+</footer>
