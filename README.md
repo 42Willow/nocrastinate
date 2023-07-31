@@ -2,7 +2,7 @@
 
 # Nocrastinate
 
-[Live App](https://42willow.github.io/nocrastinate) | [Documentation](https://github.com/42willow/nocrastinate/wiki) | [Contributing](CONTRIBUTING.md) | [License](LICENSE)
+[Live App](https://42willow.github.io/nocrastinate) | [Documentation](https://github.com/42willow/nocrastinate/wiki) | [License](LICENSE)
 
 Nocrastinate is a Progressive Web App (PWA) built with Svelte and DaisyUI that offers task management, pomodoro timer, time management, metrics, scheduling, and customisability features.
 
