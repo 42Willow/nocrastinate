@@ -58,15 +58,36 @@
           </div>
         </div>
     </div>
-
-    <h2 class="text-3xl font-bold ml-4">Running locally</h2>
-    <div class="mockup-code m-4">
-        <pre data-prefix=">" class="text-warning"><code>install git</code></pre>
-        <pre data-prefix=">" class="text-warning"><code>install nodejs</code></pre>
-        <pre data-prefix="$"><code>git clone https://github.com/42Willow/nocrastinate.git</code></pre> 
-        <pre data-prefix="$"><code>npm install</code></pre>
-        <pre data-prefix="$"><code>npm run dev</code></pre>
-        <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+    <div class="flex flex-wrap justify-left">
+      <div class="w-full lg:flex-1">
+        <article class="prose p-4">
+          <h2>P2P - WebRTC</h2>
+          <h3>Advantages</h3>
+          <ul>
+            <li>Audio and text chats during pomodoro breaks.</li>
+            <li>Transferring offline profiles between devices.</li>
+            <li>Share profile and tasks with friends.</li>
+            <li>High security because of non-static client ID.</li>
+          </ul>
+          <h3>Limitations</h3>
+          <p>Non-static client ID, everything above expires upon refreshing the page.</p>
+        </article>
+      </div>
+      <div class="w-full lg:w-auto">
+        <article class="prose p-4">
+          <h2>Running locally</h2>
+          <p>
+            Useful for contributing for the project, or if you want to run it locally for some reason.
+          </p>  
+        </article>
+        <div class="mockup-code m-4">
+            <pre data-prefix=">" class="text-warning"><code>install git</code></pre>
+            <pre data-prefix=">" class="text-warning"><code>install nodejs</code></pre>
+            <pre data-prefix="$"><code>git clone https://github.com/42Willow/nocrastinate.git</code></pre> 
+            <pre data-prefix="$"><code>npm install</code></pre>
+            <pre data-prefix="$"><code>npm run dev</code></pre>
+            <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+        </div>
+      </div>
     </div>
-
 </main>

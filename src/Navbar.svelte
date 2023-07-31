@@ -70,9 +70,9 @@
           <!-- svelte-ignore a11y-missing-attribute -->
           <li><Link to="/nocrastinate/profile">Profile</Link></li>
           <!-- svelte-ignore a11y-missing-attribute -->
-          <li><Link to="/nocrastinate/profile">Settings</Link></li>
+          <li><Link to="/nocrastinate/settings">Settings</Link></li>
           <!-- svelte-ignore a11y-missing-attribute -->
-          <li><Link to="/nocrastinate/profile">Manage Profiles<span class="badge">Beta</span></Link></li>
+          <li><Link to="/nocrastinate/switchprofile">Switch Profiles<span class="badge">Beta</span></Link></li>
         </ul>
       </div>
     </div>
