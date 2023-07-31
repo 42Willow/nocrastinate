@@ -1,6 +1,4 @@
-<main class="bg-base-200 p-3">
-    
-
+<main class="p-3 bg-base-200">
     <div class="flex flex-wrap justify-end">
         <div class="w-full lg:flex-1">
             <article class="prose p-4">
@@ -16,15 +14,24 @@
           <div class="mockup-browser-toolbar">
             <div class="input">https://42willow.github.io/nocrastinate</div>
           </div>
-          <div class="flex justify-center px-4 py-16 bg-base-200">Works in any browser, even mobile!</div>
+          <div class="flex justify-center px-4 py-16 bg-base-100">Works in any browser, even mobile!</div>
         </div>
-      </div>
+
+        <!-- Contribute alert -->
+    <div class="alert shadow-lg mt-4 bg-base-100 mx-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <div>
+            <h3 class="font-bold">In Beta</h3>
+            <div class="text-xs">Looking for contributors</div>
+        </div>
+        <a class="btn btn-sm" href="https://github.com/42willow/nocrastinate">Contribute</a>
+    </div>
 
     <div class="hero py-2">
         <div class="hero-content flex-col lg:flex-row-reverse">
           <div class="text-center lg:text-left pl-4">
-            <h2 class="text-3xl font-bold">Create a user now!</h2>
-            <p class="py-6">Create a local user which is stored in a little cookie, you can always switch users later - and you can have as many as you want!<br><br>It is recommended to install the PWA for the best experience.</p>
+            <h2 class="text-3xl font-bold">Create a profile now!</h2>
+            <p class="py-6">Create a local profile which is stored in a little cookie 🍪, you can always switch profiles later - and you can have as many as you want!<br><br>It is recommended to install the PWA for the best experience.</p>
           </div>
           <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <div class="card-body">
@@ -40,10 +47,18 @@
                 <input if="pfp-input" type="file" class="file-input file-input-bordered w-full max-w-xs" />
               </div>
               <div class="form-control mt-6">
-                <button class="btn btn-primary">Create user</button>
+                <button class="btn btn-primary">Create profile</button>
+              </div>
+              <div class="alert alert-warning">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Beta, previous data may be lost</span>
               </div>
             </div>
           </div>
         </div>
-    </div>    
+    </div>
+
+    
+    <!-- some cards to illustrate features -->
+
 </main>

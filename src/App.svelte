@@ -1,5 +1,6 @@
 <script>
-  import Counter from './Intro.svelte'
+  import Intro from './Intro.svelte'
+  import Pomodoro from './Pomodoro.svelte'
 </script>
 
 <div class="navbar bg-base-100">
@@ -31,7 +32,7 @@
             </ul>
         </div>
         <!-- svelte-ignore a11y-missing-attribute -->
-        <a class="btn btn-ghost normal-case text-xl">Nocrastinate</a>
+        <a class="btn btn-ghost normal-case text-xl" href="/">Nocrastinate</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
@@ -43,7 +44,7 @@
             <li tabindex="0">
                 <details>
                     <summary>Strategies</summary>
-                    <ul class="p-2">
+                    <ul class="p-2 z-10">
                         <!-- svelte-ignore a11y-missing-attribute -->
                         <li><a>Pomodoro</a></li>
                         <!-- svelte-ignore a11y-missing-attribute -->
@@ -57,7 +58,6 @@
     </div>
     <div class="navbar-end">
       <label class="btn btn-circle swap swap-rotate">
-  
         <!-- this hidden checkbox controls the state -->
         <input type="checkbox" />
         
@@ -67,11 +67,30 @@
         <!-- pause icon -->
         <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M585-200q-24.75 0-42.375-17.625T525-260v-440q0-24.75 17.625-42.375T585-760h115q24.75 0 42.375 17.625T760-700v440q0 24.75-17.625 42.375T700-200H585Zm-325 0q-24.75 0-42.375-17.625T200-260v-440q0-24.75 17.625-42.375T260-760h115q24.75 0 42.375 17.625T435-700v440q0 24.75-17.625 42.375T375-200H260Zm325-60h115v-440H585v440Zm-325 0h115v-440H260v440Zm0-440v440-440Zm325 0v440-440Z"/></svg>
       </label>
-      <!-- <a class="btn" href="https://github.com/42willow/nocrastinate">GitHub</a> -->
+      <div class="dropdown dropdown-end">
+        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+        <!-- svelte-ignore a11y-label-has-associated-control -->
+        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+          <div class="w-10 rounded-full">
+            <!-- svelte-ignore a11y-img-redundant-alt -->
+            <img src="guest.png" alt="Profile Picture" />
+          </div>
+        </label>
+        <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+        <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+          <!-- svelte-ignore a11y-missing-attribute -->
+          <li><a>Profile</a></li>
+          <!-- svelte-ignore a11y-missing-attribute -->
+          <li><a>Settings</a></li>
+          <!-- svelte-ignore a11y-missing-attribute -->
+          <li><a>Manage Profiles<span class="badge">Beta</span></a></li>
+        </ul>
+      </div>
     </div>
 </div>
 
-<Counter />
+<!-- <Pomodoro /> -->
+<Intro />
 
 <footer class="footer footer-center p-10 bg-primary text-primary-content">
   <div>
@@ -91,3 +110,16 @@
     </div>
   </div>
 </footer>
+
+<div class="drawer-side">
+  <label for="my-drawer-3" class="drawer-overlay"></label> 
+  <ul class="menu p-4 w-80 h-full bg-base-200">
+    <!-- Sidebar content here -->
+    <!-- svelte-ignore a11y-missing-attribute -->
+    <li><a>Sidebar Item 1</a></li>
+    <!-- svelte-ignore a11y-missing-attribute -->
+    <li><a>Sidebar Item 2</a></li>
+    
+  </ul>
+  
+</div>
