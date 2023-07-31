@@ -1,0 +1,1 @@
+<object type="image/svg+xml" data="404.svg" title="404 Not Found" />
