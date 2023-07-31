@@ -59,11 +59,8 @@
         </div>
     </div>
 
-    <article class="prose ml-4">
-        <h2>Running locally</h2>
-        <p>Paranoid about privacy? Want to contribute to the project? Use these simple commands.</p>
-    </article>
-    <div class="mockup-code mt-4 ml-4">
+    <h2 class="text-3xl font-bold ml-4">Running locally</h2>
+    <div class="mockup-code m-4">
         <pre data-prefix=">" class="text-warning"><code>install git</code></pre>
         <pre data-prefix=">" class="text-warning"><code>install nodejs</code></pre>
         <pre data-prefix="$"><code>git clone https://github.com/42Willow/nocrastinate.git</code></pre> 
