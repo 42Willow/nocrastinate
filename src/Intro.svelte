@@ -18,13 +18,14 @@
         </div>
 
         <!-- Contribute alert -->
-    <div class="alert shadow-lg mt-4 bg-base-100 mx-4">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-        <div>
-            <h3 class="font-bold">In Beta</h3>
-            <div class="text-xs">Looking for contributors</div>
+        <div class="alert shadow-lg mt-4 bg-base-100 mx-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <div>
+                <h3 class="font-bold">In Beta</h3>
+                <div class="text-xs">Looking for contributors</div>
+            </div>
+            <a class="btn btn-sm" href="https://github.com/42willow/nocrastinate">Contribute</a>
         </div>
-        <a class="btn btn-sm" href="https://github.com/42willow/nocrastinate">Contribute</a>
     </div>
 
     <div class="hero py-2">
@@ -58,7 +59,17 @@
         </div>
     </div>
 
-    
-    <!-- some cards to illustrate features -->
+    <article class="prose ml-4">
+        <h2>Running locally</h2>
+        <p>Paranoid about privacy? Want to contribute to the project? Use these simple commands.</p>
+    </article>
+    <div class="mockup-code mt-4 ml-4">
+        <pre data-prefix=">" class="text-warning"><code>install git</code></pre>
+        <pre data-prefix=">" class="text-warning"><code>install nodejs</code></pre>
+        <pre data-prefix="$"><code>git clone https://github.com/42Willow/nocrastinate.git</code></pre> 
+        <pre data-prefix="$"><code>npm install</code></pre>
+        <pre data-prefix="$"><code>npm run dev</code></pre>
+        <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+    </div>
 
 </main>

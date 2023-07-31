@@ -32,7 +32,7 @@
             </ul>
         </div>
         <!-- svelte-ignore a11y-missing-attribute -->
-        <a class="btn btn-ghost normal-case text-xl" href="/">Nocrastinate</a>
+        <a class="btn btn-ghost normal-case text-xl" href="https://42willow.github.io/nocrastinate">Nocrastinate</a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
