@@ -1,5 +1,5 @@
 <script>
-  import { Router, Route, Link } from 'svelte-routing';
+  import { Router, Route } from 'svelte-routing';
   import Intro from './pages/Intro.svelte'
   import Pomodoro from './pages/Pomodoro.svelte'
   import NotFound from './pages/NotFound.svelte';
