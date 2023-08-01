@@ -1,4 +1,8 @@
-<main class="p-3 bg-base-200">
+<script>
+  import Signup from "../components/profile/Signup.svelte";
+</script>
+
+<div class="p-3">
     <div class="flex flex-wrap justify-end">
         <div class="w-full lg:flex-1">
             <article class="prose p-4">
@@ -34,28 +38,7 @@
             <h2 class="text-3xl font-bold">Create a profile now!</h2>
             <p class="py-6">Create a local profile which is stored in a little cookie 🍪, you can always switch profiles later - and you can have as many as you want!<br><br>It is recommended to install the PWA for the best experience.</p>
           </div>
-          <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <div class="card-body">
-              <div class="form-control">
-                <label class="label" for="username-input">
-                  <span class="label-text">Username</span>
-                  <span class="label-text-alt text-red-300">*required</span>
-                </label>
-                <input id="username-input" type="text" placeholder="username" class="input input-bordered" />
-                <label class="label" for="pfp-input">
-                    <span class="label-text">Upload a profile picture</span>
-                </label>
-                <input if="pfp-input" type="file" class="file-input file-input-bordered w-full max-w-xs" />
-              </div>
-              <div class="form-control mt-6">
-                <button class="btn btn-primary">Create profile</button>
-              </div>
-              <div class="alert alert-warning">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span>Beta, previous data may be lost</span>
-              </div>
-            </div>
-          </div>
+          <Signup />
         </div>
     </div>
     <div class="flex flex-wrap justify-left">
@@ -90,4 +73,4 @@
         </div>
       </div>
     </div>
-</main>
+</div>
