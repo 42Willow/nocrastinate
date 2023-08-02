@@ -50,10 +50,8 @@
             <li>Audio and text chats during pomodoro breaks.</li>
             <li>Transferring offline profiles between devices.</li>
             <li>Share profile and tasks with friends.</li>
-            <li>High security because of non-static client ID.</li>
+            <li>Static ID, no need to exchange IDs each session.</li>
           </ul>
-          <h3>Limitations</h3>
-          <p>Non-static client ID, everything above expires upon refreshing the page.</p>
         </article>
       </div>
       <div class="w-full lg:w-auto">

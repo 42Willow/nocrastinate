@@ -15,6 +15,7 @@
                 <li><Link to="/nocrastinate/home">Home</Link></li>
                 <li><Link to="/nocrastinate/tasks">Tasks</Link></li>
                 <li><Link to="/nocrastinate/metrics">Metrics</Link></li>
+                <li><Link to="/nocrastinate/p2p">P2P</Link></li>
                 <li>
                     <div>Strategies</div>
                     <ul class="p-2">
@@ -32,6 +33,7 @@
             <li><Link to="/nocrastinate/home">Home</Link></li>
             <li><Link to="/nocrastinate/tasks">Tasks</Link></li>
             <li><Link to="/nocrastinate/metrics">Metrics</Link></li>
+            <li><Link to="/nocrastinate/p2p">P2P</Link></li>
             <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
             <li tabindex="0">
                 <details>

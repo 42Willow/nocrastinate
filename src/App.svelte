@@ -5,8 +5,15 @@
   import Tasks from './pages/Tasks.svelte';
   import Settings from './pages/Settings.svelte';
   import NotFound from './pages/NotFound.svelte';
+  import Peer from './pages/Peer.svelte';
   import Navbar from './Navbar.svelte';
   import Footer from './Footer.svelte';
+  import { onMount } from "svelte";
+  import { themeChange } from "theme-change";
+
+  onMount(() => {
+    themeChange(false);
+  });
 </script>
 
 
@@ -16,9 +23,10 @@
 
     <Route path="/nocrastinate/" component={Intro} />
     <Route path="/nocrastinate/tasks" component={Tasks} />
-    <Route path="/nocrastinate/pomodoro" component={Pomodoro} />
+    <Route path="/nocrastinate/p2p" component={Peer} />
+    <!-- <Route path="/nocrastinate/pomodoro" component={Pomodoro} /> -->
     <Route path="/nocrastinate/settings" component={Settings} />
-    <Route path="*" component={NotFound} />
+    <Route component={NotFound} />
   </Router>
 </main>
 

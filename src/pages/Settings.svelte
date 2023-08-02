@@ -7,13 +7,12 @@
     themeChange(false)
     // 👆 false parameter is required for svelte
     })
-
 </script>
 
-<h1 class="text-4xl font-bold m-4">Settings</h1>
+<h1 class="text-4xl font-extrabold m-8">Settings</h1>
 
 
-<div class="m-4">
+<div class="m-8">
     <h2 class="mb-4 text-3xl font-bold">Theme</h2>
     <select data-choose-theme class="select w-full max-w-xs">
         <option disabled selected>Pick your theme</option>
