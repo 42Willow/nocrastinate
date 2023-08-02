@@ -36,7 +36,7 @@
         <div class="hero-content flex-col lg:flex-row-reverse">
           <div class="text-center lg:text-left pl-4">
             <h2 class="text-3xl font-bold">Create a profile now!</h2>
-            <p class="py-6">Create a local profile which is stored in a little cookie 🍪, you can always switch profiles later - and you can have as many as you want!<br><br>It is recommended to install the PWA for the best experience.</p>
+            <p class="py-6">Create a local profile which is stored in localStorage, profile syncing will be available through a Chrome extension soon™️<br><br>It is recommended to install the PWA for the best experience.</p>
           </div>
           <Signup />
         </div>
