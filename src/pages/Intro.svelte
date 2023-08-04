@@ -38,7 +38,11 @@
             <h2 class="text-3xl font-bold">Create a profile now!</h2>
             <p class="py-6">Create a local profile which is stored in localStorage, profile syncing will be available through a Chrome extension soon™️<br><br>It is recommended to install the PWA for the best experience.</p>
           </div>
-          <Signup />
+          <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div class="card-body">
+              <Signup />
+            </div>
+          </div>
         </div>
     </div>
     <div class="flex flex-wrap justify-left">

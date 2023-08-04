@@ -1,5 +1,12 @@
 <script>
     import { Link } from 'svelte-routing';
+    import Signup from './components/profile/Signup.svelte';
+
+    function getUsername() {
+      if (!localStorage.getItem('profileData')) return;
+      let profileData = JSON.parse(localStorage.getItem('profileData'));
+      return profileData.username;
+    }
 </script>
 
 <div class="navbar bg-base-100">
@@ -61,21 +68,40 @@
       <div class="dropdown dropdown-end">
         <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
         <!-- svelte-ignore a11y-label-has-associated-control -->
-        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
-          <div class="w-10 rounded-full">
-            <!-- svelte-ignore a11y-img-redundant-alt -->
-            <img src="guest.png" alt="Profile Picture" />
+        <label tabindex="0" class="btn btn-ghost btn-circle avatar online placeholder">
+          <div class="bg-neutral-focus text-neutral-content rounded-full w-16">
+          {#if localStorage.getItem('profileData')}
+            {#if JSON.parse(localStorage.getItem('profileData')).pfp}
+              <img src={JSON.parse(localStorage.getItem('profileData')).pfp} alt="Profile" />
+            {:else}
+              <span class="text-xl">{getUsername().substring(0, 2)}</span>
+            {/if}
+          {:else}
+            <img src="guest.png" alt="Guest" />
+          {/if}
           </div>
         </label>
         <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
         <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-          <!-- svelte-ignore a11y-missing-attribute -->
-          <li><Link to="/nocrastinate/profile">Profile</Link></li>
-          <!-- svelte-ignore a11y-missing-attribute -->
-          <li><Link to="/nocrastinate/settings">Settings</Link></li>
-          <!-- svelte-ignore a11y-missing-attribute -->
-          <li><Link to="/nocrastinate/switchprofile">Switch Profiles<span class="badge">Beta</span></Link></li>
+          {#if localStorage.getItem('profileData')}
+            <li class="font-bold p-2">Hello, {getUsername()}!</li>
+            <li><Link to="/nocrastinate/profile">Profile<span class="badge badge-neutral">Beta</span></Link></li>
+            <li><Link to="/nocrastinate/settings">Settings</Link></li>
+          {:else}
+            <li><button onclick="signup_modal.showModal()">Sign Up</button></li>
+          {/if}
         </ul>
       </div>
     </div>
 </div>
+
+
+<!-- Open the modal using ID.showModal() method -->
+<dialog id="signup_modal" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box">
+    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    <div class="py-8">
+      <Signup />
+    </div>
+  </form>
+</dialog>
