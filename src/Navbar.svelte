@@ -1,6 +1,7 @@
 <script>
     import { Link } from 'svelte-routing';
     import Signup from './components/profile/Signup.svelte';
+    import NavbarTime from './components/pomodoro/NavbarTime.svelte';
 
     function getUsername() {
       if (!localStorage.getItem('profileData')) return;
@@ -9,7 +10,7 @@
     }
 </script>
 
-<div class="navbar bg-base-100">
+<div class="navbar sticky top-0 bg-base-100 z-10">
     <div class="navbar-start">
         <div class="dropdown">
             <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
@@ -55,30 +56,23 @@
         </ul>
     </div>
     <div class="navbar-end">
-      <label class="btn btn-circle swap swap-rotate">
-        <!-- this hidden checkbox controls the state -->
-        <input type="checkbox" />
-        
-        <!-- play icon -->
-        <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M366-232q-15 10-30.5 1T320-258v-450q0-18 15.5-27t30.5 1l354 226q14 9 14 25t-14 25L366-232Zm14-251Zm0 171 269-171-269-171v342Z"/></svg>
-        
-        <!-- pause icon -->
-        <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M585-200q-24.75 0-42.375-17.625T525-260v-440q0-24.75 17.625-42.375T585-760h115q24.75 0 42.375 17.625T760-700v440q0 24.75-17.625 42.375T700-200H585Zm-325 0q-24.75 0-42.375-17.625T200-260v-440q0-24.75 17.625-42.375T260-760h115q24.75 0 42.375 17.625T435-700v440q0 24.75-17.625 42.375T375-200H260Zm325-60h115v-440H585v440Zm-325 0h115v-440H260v440Zm0-440v440-440Zm325 0v440-440Z"/></svg>
-      </label>
+      <NavbarTime />
       <div class="dropdown dropdown-end">
         <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
         <!-- svelte-ignore a11y-label-has-associated-control -->
-        <label tabindex="0" class="btn btn-ghost btn-circle avatar online placeholder">
-          <div class="bg-neutral-focus text-neutral-content rounded-full w-16">
-          {#if localStorage.getItem('profileData')}
-            {#if JSON.parse(localStorage.getItem('profileData')).pfp}
-              <img src={JSON.parse(localStorage.getItem('profileData')).pfp} alt="Profile" />
+        <label tabindex="0" class="btn btn-ghost btn-circle avatar online {localStorage.getItem('profileData') && JSON.parse(localStorage.getItem('profileData')).pfp ? '' : 'placeholder'}">
+        <!-- <label tabindex="0" class="btn btn-ghost btn-circle avatar"> -->
+          <div class="bg-neutral text-neutral-content w-10 rounded-full">
+
+            {#if localStorage.getItem('profileData')}
+              {#if JSON.parse(localStorage.getItem('profileData')).pfp}
+                <img src={JSON.parse(localStorage.getItem('profileData')).pfp} alt="Profile" />
+              {:else}
+                <span class="text-xl">{getUsername().substring(0, 2)}</span>
+              {/if}
             {:else}
-              <span class="text-xl">{getUsername().substring(0, 2)}</span>
+              <img src="guest.png" alt="Guest" />
             {/if}
-          {:else}
-            <img src="guest.png" alt="Guest" />
-          {/if}
           </div>
         </label>
         <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
