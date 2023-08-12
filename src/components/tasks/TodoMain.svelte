@@ -1,10 +1,20 @@
 <script>
     let newItem = '';
 	
-    let todoList = [{text: 'Write my first post', status: true},
-                    {text: 'Upload the post to the blog', status: true},
-                    {text: 'Publish the post at Facebook', status: false}];
+    // Example todoList
+    // let todoList = [{text: 'Write my first post', status: true},
+    //                 {text: 'Upload the post to the blog', status: true},
+    //                 {text: 'Publish the post at Facebook', status: false}];
+
+    let todoList = localStorage.getItem('profileData') ? JSON.parse(localStorage.getItem('profileData')).todoList : [];
+
 	
+    function updateLocalStorage() {
+        let profileData = JSON.parse(localStorage.getItem('profileData'));
+        profileData.todoList = todoList;
+        localStorage.setItem('profileData', JSON.stringify(profileData));
+    }
+
 	function addToList() {
 		todoList = [...todoList, {text: newItem, status: false}];
 		newItem = '';
@@ -13,6 +23,12 @@
 	function removeFromList(index) {
 		todoList.splice(index, 1)
 		todoList = todoList;
+    }
+
+    function checkboxClicked(index) {
+        console.log(index)
+        todoList[index].status = !todoList[index].status;
+        updateLocalStorage();
     }
 </script>
 <div class="card w-96 bg-base-100 shadow-xl m-4">
@@ -29,18 +45,10 @@
         {#each todoList as item, index}
             <div class="form-control">
                 <label class="label cursor-pointer">
-                    <input type="checkbox" checked={item.status} class="checkbox checkbox-primary" />
-                    <span class="label-text">{item.text}</span> 
+                    <input type="checkbox" checked={item.status} class="checkbox checkbox-primary" on:click={() => checkboxClicked(index)}/>
+                    <span class="label-text" style="{item.status ? 'text-decoration: line-through' : ''}">{item.text}</span> 
                 </label>
             </div>
         {/each}
     </div>
 </div>
-
-
-
-<style> 
-	.checked {
-        text-decoration: line-through;
-    }
-</style> 

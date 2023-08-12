@@ -16,6 +16,7 @@
         pfp: resizedProfilePic,
         peerId: generatePeerId(username),
         secureID: generateRandomString(10),
+        todoList: [],
       }
       // console.log(profileData);
       localStorage.setItem("profileData", JSON.stringify(profileData));
