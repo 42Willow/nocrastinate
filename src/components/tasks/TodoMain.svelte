@@ -1,10 +1,29 @@
 <script>
+    import confetti from 'canvas-confetti';
+    import TodoItem from './TodoItem.svelte';
+
+    function createConfetti(e) {
+        const x = e.clientX;
+        const y = e.clientY;
+        // translate mouse coordinates into confetti coordinates
+        const normalizedX = x / window.innerWidth;
+        const normalizedY = y / window.innerHeight;
+        console.log({normalizedX, normalizedY})
+
+        confetti({
+            particleCount: 100,
+            spread: 360,
+            startVelocity: 30,
+            origin: { x: normalizedX, y: normalizedY }
+        });
+    }
+
     let newItem = '';
 	
     // Example todoList
-    // let todoList = [{text: 'Write my first post', status: true},
-    //                 {text: 'Upload the post to the blog', status: true},
-    //                 {text: 'Publish the post at Facebook', status: false}];
+    // let todoList = [{text: 'Migrate to the fediverse', status: true},
+    //                 {text: 'Publish a post at Mastodon', status: false}];
+    //                 {text: 'Share this app with friends', status: false}];
 
     let todoList = localStorage.getItem('profileData') ? JSON.parse(localStorage.getItem('profileData')).todoList : [];
 
@@ -18,17 +37,22 @@
 	function addToList() {
 		todoList = [...todoList, {text: newItem, status: false}];
 		newItem = '';
+        updateLocalStorage();
 	}
 	
-	function removeFromList(index) {
+	function deleteTodo(index) {
 		todoList.splice(index, 1)
 		todoList = todoList;
+        updateLocalStorage();
     }
 
-    function checkboxClicked(index) {
+    function checkboxClicked(event, index) {
         console.log(index)
         todoList[index].status = !todoList[index].status;
         updateLocalStorage();
+        if (todoList[index].status) {
+            createConfetti(event);
+        }
     }
 </script>
 <div class="card w-96 bg-base-100 shadow-xl m-4">
@@ -43,12 +67,7 @@
         </div>
         <br/>
         {#each todoList as item, index}
-            <div class="form-control">
-                <label class="label cursor-pointer">
-                    <input type="checkbox" checked={item.status} class="checkbox checkbox-primary" on:click={() => checkboxClicked(index)}/>
-                    <span class="label-text" style="{item.status ? 'text-decoration: line-through' : ''}">{item.text}</span> 
-                </label>
-            </div>
+        <TodoItem {item} {index} {deleteTodo} {checkboxClicked}/>
         {/each}
     </div>
 </div>

@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.4",
+    "@types/canvas-confetti": "^1.6.0",
     "autoprefixer": "^10.4.2",
     "daisyui": "^3.5.0",
     "gh-pages": "^5.0.0",
@@ -19,6 +20,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.9",
+    "canvas-confetti": "^1.6.0",
     "peerjs": "^1.4.7",
     "react-image-file-resizer": "^0.4.8",
     "theme-change": "^2.5.0"

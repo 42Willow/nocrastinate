@@ -17,6 +17,20 @@
         peerId: generatePeerId(username),
         secureID: generateRandomString(10),
         todoList: [],
+        settings: {
+          pomodoro: {
+            work: 25,
+            shortBreak: 5,
+            longBreak: 15,
+            longBreakInterval: 4,
+          },
+          confetti: true,
+          pomoWidget: {
+            enabled: true,
+            position: "bottom-left",
+            showSeconds: true,
+          }
+        }
       }
       // console.log(profileData);
       localStorage.setItem("profileData", JSON.stringify(profileData));
