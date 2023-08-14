@@ -1,22 +1,5 @@
 <script>
-    import confetti from 'canvas-confetti';
     import TodoItem from './TodoItem.svelte';
-
-    function createConfetti(e) {
-        const x = e.clientX;
-        const y = e.clientY;
-        // translate mouse coordinates into confetti coordinates
-        const normalizedX = x / window.innerWidth;
-        const normalizedY = y / window.innerHeight;
-        console.log({normalizedX, normalizedY})
-
-        confetti({
-            particleCount: 100,
-            spread: 360,
-            startVelocity: 30,
-            origin: { x: normalizedX, y: normalizedY }
-        });
-    }
 
     let newItem = '';
 	
@@ -47,12 +30,8 @@
     }
 
     function checkboxClicked(event, index) {
-        console.log(index)
         todoList[index].status = !todoList[index].status;
         updateLocalStorage();
-        if (todoList[index].status) {
-            createConfetti(event);
-        }
     }
 </script>
 <div class="card w-96 bg-base-100 shadow-xl m-4">

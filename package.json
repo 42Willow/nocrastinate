@@ -8,19 +8,18 @@
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.4",
-    "@types/canvas-confetti": "^1.6.0",
     "autoprefixer": "^10.4.2",
     "daisyui": "^3.5.0",
     "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "svelte": "^3.58.0",
+    "svelte-confetti": "^1.2.4",
     "svelte-routing": "^2.0.0",
     "tailwindcss": "^3.3.1",
     "vite": "^4.4.7"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.9",
-    "canvas-confetti": "^1.6.0",
     "peerjs": "^1.4.7",
     "react-image-file-resizer": "^0.4.8",
     "theme-change": "^2.5.0"
